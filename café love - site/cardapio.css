@@ -1,0 +1,328 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8a9b3;
+  overflow-x: hidden;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  background-color: #f8a9b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo span {
+  font-size: 22px;
+  color: #125f63;
+  font-weight: 700;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #125f63;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #0d4c4f;
+}
+
+/* ===== Carrossel ===== */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+}
+
+.carousel img.active {
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 45%;
+  background-color: #004d46;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #0d4c4f;
+}
+
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+/* ===== Chatbot ===== */
+.chatbot {
+  width: 300px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 2px solid #004d46;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.chat-header {
+  background-color: #004d46;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  font-weight: 600;
+}
+
+.chat-body {
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: left;
+  background-color: #fafafa;
+}
+
+.bot-msg {
+  background-color: #e8f5e9;
+  padding: 6px;
+  border-radius: 6px;
+  margin: 5px 0;
+}
+
+.user-msg {
+  background-color: #c8e6c9;
+  padding: 6px;
+  border-radius: 6px;
+  margin: 5px 0;
+  text-align: right;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.chat-input button {
+  background-color: #004d46;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #0d4c4f;
+}
+
+/* ===== Carrinho ===== */
+.cart {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: #1E6E6C;
+  border: 2px solid #004d46;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  color: #fff;
+  z-index: 10;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cart h3 {
+  margin-bottom: 8px;
+}
+
+.cart ul {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.cart button {
+  background-color: #004d46;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.cart button:hover {
+  background-color: #0d4c4f;
+}
+
+/* ===== Rodapé ===== */
+footer p {
+  color: #0d4c4f;
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* 🌈 ===== Responsividade ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+
+  .carousel-container {
+    width: 95%;
+  }
+
+  .chatbot {
+    width: 280px;
+    right: 10px;
+  }
+
+  .cart {
+    width: 230px;
+    left: 10px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .prev,
+  .next {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .chatbot {
+    width: 90%;
+    right: 5%;
+    bottom: 15px;
+  }
+
+  .cart {
+    width: 90%;
+    left: 5%;
+    bottom: 260px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+
+  .chatbot,
+  .cart {
+    width: 95%;
+    left: 2.5%;
+    right: 2.5%;
+  }
+
+  .chat-body {
+    height: 180px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}

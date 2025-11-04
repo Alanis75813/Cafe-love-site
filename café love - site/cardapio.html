@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Cardápio - Cafe Love</title>
+  <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+  <header>
+    <div class="logo"> 
+      <img src="cafelove-logo.webp" alt="Logo Cafe Love">
+      <span>Cafe Love</span>
+    </div>
+
+    <nav>
+      <p><a href="cardapio.html" target="_self">Cardápio</a></p>
+      <p><a href="sobre.html" target="_self">Sobre Nós</a></p>
+      <p><a href="cadastro.html" target="_self">Criar conta</a></p>
+    </nav>
+  </header>
+
+   <!-- Carrossel -->
+  <div class="carousel-container">
+    <button class="prev">❮</button>
+    <div class="carousel">
+      <img src="Cardápio (2).webp" alt="Menu de Cafés" class="active">
+      <img src="Cardápio (1).webp" alt="Menu de Pães e Bolos">
+      <img src="Cardápio.webp" alt="Menu de Sanduíches e Lanches">
+    </div>
+    <button class="next">❯</button>
+  </div>
+
+  <!-- Janela da IA -->
+  <div class="chatbot">
+    <div class="chat-header">🤖 Assistente da Cafeteria</div>
+    <div class="chat-body" id="chat-body">
+      <div class="bot-msg">Olá! Eu sou a IA da cafeteria ☕. Quer ajuda para escolher um pedido?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Digite seu pedido...">
+      <button id="send-btn">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Carrinho -->
+  <div class="cart">
+    <h3>🛒 Seu Carrinho</h3>
+    <ul id="cart-items"></ul>
+    <p><strong>Total:</strong> R$ <span id="cart-total">0.00</span></p>
+    <button id="checkout-btn">Finalizar Pedido</button>
+  </div>
+
+  <footer>
+        <p>Copyright &copy; 2025 Cafe Love. Todos os direitos reservados.</p>
+    </footer>
+
+  <script src="cardapio.js"></script>
+  
+</body>
+</html>

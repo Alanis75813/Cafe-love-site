@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+/* ===== Reset global ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8a9b3;
+  overflow-x: hidden;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  background-color: #f8a9b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo span {
+  font-size: 22px;
+  color: #125f63;
+  font-weight: 700;
+}
+
+/* ===== Navegação ===== */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #125f63;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #0d4c4f;
+}
+
+/* ===== Conteúdo principal ===== */
+main {
+  background-color: #125f63;
+  width: 60%;
+  max-width: 900px;
+  padding: 60px 50px;
+  margin: 50px auto;
+  border-radius: 30px;
+  box-shadow: 15px 15px 15px #125f635d;
+  color: #f8a9b3;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #f8a9b3;
+  text-align: center;
+  text-shadow: 1px 1px 3px #0d4c4f;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.contato {
+  margin-top: 30px;
+}
+
+.contato p {
+  color: #f8a9b3;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.contato a {
+  color: #ffe4ec;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contato a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* ===== Rodapé ===== */
+footer p {
+  color: #0d4c4f;
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 14px;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  main {
+    width: 80%;
+    padding: 50px 40px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  main {
+    width: 85%;
+    padding: 40px 25px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h3, .contato p {
+    font-size: 16px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+
+  main {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h3, .contato p {
+    font-size: 15px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
